@@ -173,8 +173,9 @@ for index, row in df_links.iterrows():
     # Be polite
     time.sleep(random.uniform(0.8, 1.5))
 
-# Final save
 driver.quit()
+
+# Final save
 final_df = pd.DataFrame(results)
 final_df.to_csv(OUTPUT_FILE, index=False, encoding='utf-8-sig', sep='*')
 logger.info(f"Done! Total saved: {len(results)} → {OUTPUT_FILE}")
